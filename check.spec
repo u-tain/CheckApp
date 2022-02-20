@@ -19,9 +19,9 @@ a = Analysis(['check.py'],
              noarchive=False)
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
-
-a.datas += [('bit.ico','C:\\Users\\tatyana\\PycharmProjects\\check\\bit.ico', "DATA")]
-a.datas += [('res.png','C:\\Users\\tatyana\\PycharmProjects\\check\\res.png', "DATA")]
+# these two lines add after use pyinstaller check.py
+a.datas += [('bit.ico','path_to_your_icon\\bit.ico', "DATA")]
+a.datas += [('res.png','path_to_your_picture\\bit.ico', "DATA")]
 
 exe = EXE(pyz,
           a.scripts,
@@ -37,7 +37,7 @@ exe = EXE(pyz,
           upx_exclude=[],
           runtime_tmpdir=None,
           console=False,
-          icon='C:\\Users\\tatyana\\PycharmProjects\\check\\bit.ico',
+          icon='path_to_your_icon\\bit.ico', # this line add after use pyinstaller check.py
           disable_windowed_traceback=False,
           target_arch=None,
           codesign_identity=None,
