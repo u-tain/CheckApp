@@ -19,9 +19,12 @@ a = Analysis(['check.py'],
              noarchive=False)
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
+
+
 # these two lines add after use pyinstaller check.py
 a.datas += [('bit.ico','path_to_your_icon\\bit.ico', "DATA")]
 a.datas += [('res.png','path_to_your_picture\\bit.ico', "DATA")]
+
 
 exe = EXE(pyz,
           a.scripts,
