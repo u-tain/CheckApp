@@ -23,7 +23,7 @@ pyz = PYZ(a.pure, a.zipped_data,
 
 # these two lines add after use pyinstaller check.py
 a.datas += [('bit.ico','path_to_your_icon\\bit.ico', "DATA")]
-a.datas += [('res.png','path_to_your_picture\\bit.ico', "DATA")]
+a.datas += [('res.png','path_to_your_picture\\res.png', "DATA")]
 
 
 exe = EXE(pyz,
